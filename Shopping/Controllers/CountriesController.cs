@@ -50,11 +50,10 @@ namespace Shopping.Controllers
         }
 
         // POST: Countries/Create
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
+       
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Name")] Country country)
+        public async Task<IActionResult> Create( Country country)
         {
             if (ModelState.IsValid)
             {
@@ -82,11 +81,10 @@ namespace Shopping.Controllers
         }
 
         // POST: Countries/Edit/5
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
+        
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Name")] Country country)
+        public async Task<IActionResult> Edit(int id,  Country country)
         {
             if (id != country.Id)
             {
